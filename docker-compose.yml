@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  forex-news-app:
+    build: .
+    container_name: forex_news_service
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: always
